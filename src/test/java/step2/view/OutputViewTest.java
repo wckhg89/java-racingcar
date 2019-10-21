@@ -5,18 +5,20 @@ import org.junit.jupiter.api.Test;
 import step2.Car;
 
 import java.util.ArrayList;
-
-import static org.junit.jupiter.api.Assertions.*;
+import static org.assertj.core.api.Assertions.*;
 
 class OutputViewTest {
 
+
+
     @Test
     void print() {
-        // Given
-        Car racer0 = Car.init(0);
-        Car racer1 = Car.init(1);
-        Car racer2 = Car.init(2);
+        String EXPECTED_RESULT = "guppy : -\n"+ "honggu : --\n"+ "woowabros : ---\n";
 
+        // Given
+        Car racer0 = Car.init("guppy");
+        Car racer1 = Car.init("honggu");
+        Car racer2 = Car.init("woowabros");
 
         racer0.move(1);
         racer1.move(2);
@@ -28,6 +30,6 @@ class OutputViewTest {
         OutputView outputView = new OutputView();
 
         // Then
-        outputView.print(cars);
+        assertThat(outputView.print(cars)).isEqualTo(EXPECTED_RESULT);
     }
 }

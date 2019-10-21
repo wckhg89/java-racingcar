@@ -12,9 +12,9 @@ public class RacingGame {
     private List<Round> rounds;
 
 
-    public static RacingGame initGame(int time, int participantRacer) {
+    public static RacingGame initGame(int time, List<String> participant) {
         RacingGame racingGame = new RacingGame(time);
-        racingGame.initRound(participantRacer);
+        racingGame.initRound(participant);
 
         return racingGame;
     }
@@ -23,11 +23,11 @@ public class RacingGame {
         this.time = time;
     }
 
-    private void initRound (int participantRacer) {
+    private void initRound (List<String> participant) {
         rounds = new ArrayList<>();
 
-        for (int attempt = 0; attempt < time; attempt++) {
-            rounds.add(new Round(attempt, participantRacer));
+        for (int round = 0; round < time; round++) {
+            rounds.add(Round.initRound(round, participant));
         }
     }
 

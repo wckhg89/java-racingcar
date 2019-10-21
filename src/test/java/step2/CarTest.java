@@ -9,11 +9,11 @@ class CarTest {
 
     @Test
     void move() {
-        final int RACER_NUM = 0;
+        final String RACER = "guppy";
 
         // Given
         int pos = 1;
-        Car racer = Car.init(RACER_NUM);
+        Car racer = Car.init(RACER);
 
         // When
         racer.move(pos);
@@ -24,11 +24,11 @@ class CarTest {
 
     @Test
     void notMove() {
-        final int RACER_NUM = 0;
+        final String RACER = "guppy";
 
         // Given
-        int pos = 4;
-        Car racer = Car.init(RACER_NUM);
+        int pos = 5;
+        Car racer = Car.init(RACER);
 
         // When
         racer.move(pos);

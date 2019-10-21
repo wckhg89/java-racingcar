@@ -1,24 +1,27 @@
 package step2.view;
 
-import java.util.Scanner;
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class InputView {
 
-    private final Scanner scanner = new Scanner(System.in);
 
-    private int racer;
+    private static final String RACER_REGEX = ",";
+
+    private List<String> racer;
     private int time;
 
-    public void inputRacer () {
-        racer = scanner.nextInt();
+    public void inputRacer (String racers) {
+        racer = Arrays.stream(racers.split(RACER_REGEX))
+                .collect(Collectors.toList());
     }
 
-    public void inputTime () {
-
-        time = scanner.nextInt();
+    public void inputTime (int time) {
+        this.time = time;
     }
 
-    public int getRacer() {
+    public List<String> getRacer() {
         return racer;
     }
 

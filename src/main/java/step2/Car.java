@@ -7,9 +7,8 @@ public class Car {
     private String name;
     private int position;
 
-    public static Car init (int participantNum) {
-        final String NAME_PREFIX = "racer";
-        return new Car(NAME_PREFIX + participantNum);
+    public static Car init (String participant) {
+        return new Car(participant);
     }
 
     private Car(String name) {
