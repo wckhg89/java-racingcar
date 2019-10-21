@@ -9,8 +9,6 @@ public class OutputView {
     private static final String COS_LINE = "-";
 
     public void print (List<Car> cars) {
-        System.out.println("실행 결과");
-
         for (Car car : cars){
             System.out.println(printCarCos(car.getPosition()));
         }

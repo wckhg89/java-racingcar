@@ -4,11 +4,25 @@ import java.util.Scanner;
 
 public class InputView {
 
-    public void input () {
-        Scanner scanner = new Scanner(System.in);
-        String value = scanner.nextLine();
-        int number = scanner.nextInt();
+    private final Scanner scanner = new Scanner(System.in);
 
+    private int racer;
+    private int time;
+
+    public void inputRacer () {
+        racer = scanner.nextInt();
     }
 
+    public void inputTime () {
+
+        time = scanner.nextInt();
+    }
+
+    public int getRacer() {
+        return racer;
+    }
+
+    public int getTime() {
+        return time;
+    }
 }

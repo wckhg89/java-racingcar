@@ -17,10 +17,10 @@ class RacingGameTest {
         RacingGame racingGame = RacingGame.initGame(time, participantRacer);
 
         // Then
-        assertThat(racingGame.getCars()).hasSize(3);
-        assertThat(racingGame.getCars().get(0).getName()).isEqualTo("racer0");
-        assertThat(racingGame.getCars().get(1).getName()).isEqualTo("racer1");
-        assertThat(racingGame.getCars().get(2).getName()).isEqualTo("racer2");
+        assertThat(racingGame.getRounds().get(0).getCars()).hasSize(3);
+        assertThat(racingGame.getRounds().get(0).getCars().get(0).getName()).isEqualTo("racer0");
+        assertThat(racingGame.getRounds().get(0).getCars().get(1).getName()).isEqualTo("racer1");
+        assertThat(racingGame.getRounds().get(0).getCars().get(2).getName()).isEqualTo("racer2");
     }
 
     @Test
@@ -34,9 +34,9 @@ class RacingGameTest {
         racingGame.startGame();
 
         // Then
-        assertThat(racingGame.getCars().get(0).getPosition()).isBetween(0, 3);
-        assertThat(racingGame.getCars().get(1).getPosition()).isBetween(0, 3);
-        assertThat(racingGame.getCars().get(2).getPosition()).isBetween(0, 3);
+        assertThat(racingGame.getRounds().get(0).getCars().get(0).getPosition()).isBetween(0, 3);
+        assertThat(racingGame.getRounds().get(0).getCars().get(1).getPosition()).isBetween(0, 3);
+        assertThat(racingGame.getRounds().get(0).getCars().get(2).getPosition()).isBetween(0, 3);
     }
 
 
