@@ -1,4 +1,4 @@
-package step2.engine;
+package race.engine;
 
 import org.junit.jupiter.api.Test;
 

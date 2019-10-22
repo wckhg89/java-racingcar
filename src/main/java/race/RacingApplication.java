@@ -1,8 +1,9 @@
-package step2;
+package race;
 
-import step2.engine.RacingGame;
-import step2.view.InputView;
-import step2.view.OutputView;
+import race.domain.Round;
+import race.engine.RacingGame;
+import race.view.InputView;
+import race.view.OutputView;
 
 import java.util.Scanner;
 

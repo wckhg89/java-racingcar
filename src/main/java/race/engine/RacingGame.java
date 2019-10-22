@@ -1,7 +1,7 @@
-package step2.engine;
+package race.engine;
 
-import step2.Car;
-import step2.Round;
+import race.domain.Car;
+import race.domain.Round;
 
 import java.util.*;
 

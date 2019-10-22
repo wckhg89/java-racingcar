@@ -1,8 +1,8 @@
-package step2.view;
+package race.view;
 
 import org.assertj.core.util.Lists;
 import org.junit.jupiter.api.Test;
-import step2.Car;
+import race.domain.Car;
 
 import java.util.ArrayList;
 import static org.assertj.core.api.Assertions.*;

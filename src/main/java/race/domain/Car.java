@@ -1,4 +1,4 @@
-package step2;
+package race.domain;
 
 public class Car {
 

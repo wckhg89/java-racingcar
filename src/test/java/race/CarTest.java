@@ -1,9 +1,9 @@
-package step2;
+package race;
 
 import org.junit.jupiter.api.Test;
+import race.domain.Car;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
 
 class CarTest {
 

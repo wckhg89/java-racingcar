@@ -1,4 +1,4 @@
-package step2;
+package race.domain;
 
 import java.util.List;
 import java.util.stream.Collectors;

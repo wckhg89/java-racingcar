@@ -1,4 +1,4 @@
-package step2.view;
+package race.view;
 
 import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.*;
