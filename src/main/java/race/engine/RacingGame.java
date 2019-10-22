@@ -37,15 +37,15 @@ public class RacingGame {
         }
     }
 
+    public List<Round> getRounds() {
+        return rounds;
+    }
+
     private void cycle(Round round) {
         final int bound = 10;
 
         for (Car car : round.getCars()) {
             car.move(new Random().nextInt(bound));
         }
-    }
-
-    public List<Round> getRounds() {
-        return rounds;
     }
 }

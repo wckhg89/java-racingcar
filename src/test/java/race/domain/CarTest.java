@@ -1,4 +1,4 @@
-package race;
+package race.domain;
 
 import org.junit.jupiter.api.Test;
 import race.domain.Car;
@@ -34,6 +34,6 @@ class CarTest {
         racer.move(pos);
 
         // Then
-        assertThat(racer.getPosition()).isEqualTo(0);
+        assertThat(racer.getPosition()).isEqualTo(1);
     }
 }

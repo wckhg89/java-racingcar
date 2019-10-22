@@ -2,7 +2,8 @@ package race.domain;
 
 public class Car {
 
-    private final int LIMIT_ENABLE_MOVE_POSITION = 4;
+    private static final int START_POSITION = 1;
+    private static final int LIMIT_ENABLE_MOVE_POSITION = 4;
 
     private String name;
     private int position;
@@ -17,6 +18,7 @@ public class Car {
 
     public void move (int pos) {
         if (pos > LIMIT_ENABLE_MOVE_POSITION) {
+            this.position = START_POSITION;
             return;
         }
 
