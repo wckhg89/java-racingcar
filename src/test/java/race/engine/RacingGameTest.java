@@ -42,4 +42,17 @@ class RacingGameTest {
     }
 
 
+    @Test
+    void finishGame() {
+        // Given
+        int time = 2;
+        List<String> participants = newArrayList("guppy", "honggu", "woowabros");
+
+        // When
+        RacingGame racingGame = RacingGame.initGame(time, participants);
+        racingGame.startGame();
+
+        // Then
+        System.out.println(racingGame.finishGame());
+    }
 }

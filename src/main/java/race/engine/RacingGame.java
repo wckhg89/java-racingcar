@@ -1,9 +1,13 @@
 package race.engine;
 
-import race.domain.Car;
 import race.domain.Round;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+import java.util.Random;
+
+import static java.util.stream.Collectors.joining;
 
 
 public class RacingGame {
@@ -32,9 +36,15 @@ public class RacingGame {
     }
 
     public void startGame() {
-        for (Round round : rounds) {
-            cycle(round);
-        }
+        rounds.forEach(this::cycle);
+    }
+
+    public String finishGame () {
+        return this.rounds.stream()
+                .map(Round::extractWinner)
+                .flatMap(Collection::stream)
+                .distinct()
+                .collect(joining(","));
     }
 
     public List<Round> getRounds() {
@@ -43,9 +53,6 @@ public class RacingGame {
 
     private void cycle(Round round) {
         final int bound = 10;
-
-        for (Car car : round.getCars()) {
-            car.move(new Random().nextInt(bound));
-        }
+        round.getCars().forEach(car -> car.move(new Random().nextInt(bound)));
     }
 }

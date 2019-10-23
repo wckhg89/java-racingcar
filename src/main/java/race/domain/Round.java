@@ -8,7 +8,7 @@ public class Round {
     private int round;
     private List<Car> cars;
 
-    public static Round initRound (int round, List<String> participants) {
+    public static Round initRound(int round, List<String> participants) {
         return new Round(round, participants);
     }
 
@@ -29,5 +29,17 @@ public class Round {
 
     public List<Car> getCars() {
         return cars;
+    }
+
+    public List<String> extractWinner() {
+        int maxPosition = this.cars.stream()
+                .mapToInt(Car::getPosition)
+                .max()
+                .orElse(1);
+
+        return this.cars.stream()
+                .filter(it -> it.getPosition() == maxPosition)
+                .map(Car::getName)
+                .collect(Collectors.toList());
     }
 }
