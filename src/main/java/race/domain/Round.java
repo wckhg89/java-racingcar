@@ -8,19 +8,13 @@ public class Round {
     private int round;
     private List<Car> cars;
 
-    public static Round initRound(int round, List<String> participants) {
-        return new Round(round, participants);
+    public static Round initRound(int round, List<Car> cars) {
+        return new Round(round, cars);
     }
 
-    private Round(int round, List<String> participants) {
+    private Round(int round, List<Car> cars) {
         this.round = round;
-        this.enrollRacer(participants);
-    }
-
-    private void enrollRacer(List<String> participants) {
-        this.cars = participants.stream()
-                .map(Car::init)
-                .collect(Collectors.toList());
+        this.cars = cars;
     }
 
     public int getRound() {

@@ -2,6 +2,7 @@ package race.domain;
 
 import org.junit.jupiter.api.Test;
 import race.domain.Car;
+import race.domain.motor.SpecificMotor;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -13,10 +14,10 @@ class CarTest {
 
         // Given
         int pos = 1;
-        Car racer = Car.init(RACER);
+        Car racer = Car.init(RACER, new SpecificMotor(pos));
 
         // When
-        racer.move(pos);
+        racer.move();
 
         // Then
         assertThat(racer.getPosition()).isEqualTo(1);
@@ -28,10 +29,10 @@ class CarTest {
 
         // Given
         int pos = 5;
-        Car racer = Car.init(RACER);
+        Car racer = Car.init(RACER, new SpecificMotor(pos));
 
         // When
-        racer.move(pos);
+        racer.move();
 
         // Then
         assertThat(racer.getPosition()).isEqualTo(1);

@@ -29,4 +29,5 @@ public class OutputView {
 
         return cos.toString();
     }
+
 }
