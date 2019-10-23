@@ -1,6 +1,6 @@
-package step2.view;
+package race.view;
 
-import step2.Car;
+import race.domain.Car;
 
 import java.util.List;
 
@@ -29,4 +29,5 @@ public class OutputView {
 
         return cos.toString();
     }
+
 }
